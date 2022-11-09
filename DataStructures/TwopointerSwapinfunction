@@ -1,0 +1,25 @@
+import java.util.Arrays;
+
+public class SwapinFunc {
+    public static void main(String[] args) {
+        int[]  arr= {14,78,56,22,13,89,456,892};
+        //swap(arr,2,0);
+        reverse(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+    static void reverse(int[] arr){
+        int start=0;
+        int end=arr.length-1;
+        //swap
+        while(start<end){
+            swap(arr,start,end);
+    start++;
+    end--;
+        }
+    }
+    static void swap(int []orr,int index1,int index2){
+        int temp=orr[index1];
+        orr[index1]=orr[index2];
+        orr[index2]=temp;
+    }
+}

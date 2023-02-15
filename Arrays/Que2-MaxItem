@@ -1,0 +1,19 @@
+public class MaxItem {
+//simple Array Problem to find the Maximum element in the Array
+//also created new Search in range function that search for the maximum element in the given range 
+    public static void main(String[] args) {
+        int[] nums={1,2,23,9,18};
+        System.out.println(max(nums));
+    }
+
+     static int max(int[] nums) {
+        int max=nums[0];
+        for (int i=0;i<nums.length;i++){
+            if(max<nums[i]){
+                max=nums[i];
+            }
+        }
+         return max;
+    }
+
+}

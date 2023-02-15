@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<>(//intialcapacity: 10);
+        list.add(23);
+        list.add(34);
+        list.add(54);
+        list.add(11);
+        list.add(13);
+        list.add(26);
+        list.add(90);
+        //we can add more than intialcapacity then mentioned over
+        //arraylist is member of collection framework
+        //arrayllist is used when we dont know the size or we dont want to handle the size we say java you handle the size in that case we use arraylist
+        //there are  multiple list.(//methods) available
+
+        //input
+        for (int i = 0; i<5; i++) {
+            list.add(in.nextInt());
+        }
+        for (int i = 0; i < 5; i++) {
+            System.out.println(list.get(i));//we cant know arr[0 ],<-like this to get the index or item of that index we need to use list.get to get the index of that .
+        }
+        //output
+        System.out.println(list);
+    }
+}

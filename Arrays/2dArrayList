@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class MultiAl {
+    //multi dimensional or 2d arraylist
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+        //first you need to intialize beacause intially the list is empty just like how we did while 2d array[row][col]<- refernce
+     //intialization
+     for (int i=0;i<3;i++){
+         list.add(new ArrayList<>());
+     }
+     //add elements
+        for (int i =0;i<3;i++){
+            for (int j = 0; j < 3; j++) {
+                list.get(i).add(in.nextInt());
+            }
+        }
+        System.out.println(list);
+    }
+}

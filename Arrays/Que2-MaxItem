@@ -4,8 +4,18 @@ public class MaxItem {
     public static void main(String[] args) {
         int[] nums={1,2,23,9,18};
         System.out.println(max(nums));
+        System.out.println(SearchinRange(nums,1,5));
     }
-
+         static int SearchinRange(int[]nums,int start,int end){
+            int max=nums[0];
+            for (int i=start;i<end;i++){
+                if(max<nums[i]){
+                    max=nums[i];
+                }
+            }
+            return max;
+        }
+        
      static int max(int[] nums) {
         int max=nums[0];
         for (int i=0;i<nums.length;i++){

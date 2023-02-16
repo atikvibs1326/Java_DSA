@@ -1,0 +1,29 @@
+public class ExtraCandies{
+  public static void main(String args[]){
+    int [] candies={2,3,5,1,3};
+    int extracandies=3;
+  }
+  static ArrayList<Boolean> kidswithextracandies(int[] candies,int extra){
+    //create an empty list for result
+    ArrayList<Boolran> result =new ArrayList<Boolean>();
+    //take an int max and assign it with minimum value or 0 or anything
+    int max=Integer.MIN_VALUE;
+    //run a for loop, till the length of the candies and for evey candies[i] greater than max and if is does not the assign max=candiesofI
+    for(int i=0;i<candies.length;i++){
+      if(candies[i]>max){
+      max=candies[i];
+      }
+    }
+    //run loop till the length of the candies and for every iteration check if the existing candies and extracandies are greate than the max or less than max
+    for(int i=0;i<candies.length;i++){
+      if(candies[i]+extra >= max){
+      //this is true then add true to the empty result list
+      result.add(true);
+      }else{
+      result.add(false);
+      }
+    }
+  }
+  return result  
+  
+}

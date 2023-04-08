@@ -1,0 +1,32 @@
+public class Performance {
+    public static void main(String[] args){
+        String series =" ";
+        for (int i = 0; i <26 ; i++) {
+            char ch =(char)('a'+i);
+           series += ch;
+        }
+        System.out.println(series);
+    }
+}
+
+
+This is program has the 
+time complexity of = O(N²) which is very bad 
+
+beacause for every iteration it is creating a new object
+like first it is empty string 
+      " "+a =a
+      "a"+b =ab
+      "ab"+c=abc
+      "abc"+d= abcd
+      ......
+      "abc..xy"+z="abcdefghijklmnopqrstuvwxyz"
+      
+      So the objects which are created above the last iterations are defrenced that means they are not pointing to anything so
+      this leads to extra space and extraspace result into O(N²) which is very bad.
+      
+      How to do it in another way?
+      how we can optimize it ?
+      How good it could be if there was a such kind of datatype or whatever that could use only one object and just make change to it like we do in the arrays 
+      for that we use String Builder?
+      You can check StringBuilder in the Sbuilder.java

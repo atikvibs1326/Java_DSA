@@ -1,0 +1,23 @@
+package com.atik;
+
+public class Find {
+    public static void main(String[] args) {
+        String str ="Atik";
+        char target = 'i';
+        System.out.println(search(str,target));
+    }
+
+    static int  search(String str,char target){
+        str=str.toLowerCase();
+        if(str.length()==0){
+            return -1;
+        }
+        for(int i =0;i<str.length();i++){
+        if(str.charAt(i)==target) {
+            return i;
+            }
+        }
+        return -1;
+    }
+
+}

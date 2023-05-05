@@ -1,37 +1,31 @@
+package com.atik.sort;
+
 import java.util.Arrays;
-import java.util.Scanner;
 
-public class Buble {
+public class Bubble {
     public static void main(String[] args) {
-        int [] arr= new int[5];
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter the elements in the array to sort:");
-        for (int i = 0; i < arr.length; i++) {
-            arr[i]=in.nextInt();
-        }
-        bubbleSort(arr);
-        System.out.println(Arrays.toString(arr));
-
+    int[] nums={-3,5,-34,234,0,-12};
+    bubble(nums);
+        System.out.println(Arrays.toString(nums));
     }
-    static void bubbleSort(int[] arr){
-        boolean swapped;
-            //run the steps n-1 times
-        for (int i = 0; i < arr.length ; i++) {
-            swapped=false;
-            //for each  step ,max item will come at last respective index
-            for (int j = 1; j < arr.length-i; j++) {
-                //compare
-                //Swap if the item is smaller than the previous item
-                if(arr[j] < arr[j-1]){
-                    //swap
-                    int temp=arr[j];
-                    arr[j]=arr[j-1];
-                    arr[j-1]=temp;
-                    swapped=true;
-                }
+    static void bubble(int [] arr){
+        //run the outer-loop i which like the counter
+        boolean isSwapped;
+        for (int i = 0; i <arr.length; i++) {
+            isSwapped=false;
+            //inner-loop j at each pass,the largest item will come at the respective index
+            for (int j = 1; j <arr.length-i ; j++) {
+                //check then swap
+               if(arr[j] < arr[j-1]){
+                   //swap
+                   int temp=arr[j];
+                   arr[j]=arr[j-1];
+                   arr[j-1]=temp;
+                   isSwapped=true;
+               }
             }
-        //if you did not swap for any particular vlaue of i ,it means the array is sorted hence stop the program
-            if(!swapped){   //!not false will give true
+            //if you do not swap for the particular value of i,it means the array is sorted ,hence stop the program
+            if(!isSwapped){
                 break;
             }
         }

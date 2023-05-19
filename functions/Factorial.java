@@ -24,5 +24,13 @@ class Factorial{
     }
     return fact;
   }
+  //using recursion
+  static int isfact(int a) {
+        if (a == 0) {
+            return 1;
+        }
+        return a * isfact(a - 1);
+
+    }
   
 }

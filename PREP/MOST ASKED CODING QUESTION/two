@@ -1,0 +1,23 @@
+package com.atik.MyCodingPractice;
+
+import java.util.Scanner;
+
+//check if number is even or odd
+public class Two {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the num:");
+        int num=in.nextInt();
+        System.out.println(evoked(num));
+    }
+
+    static String evoked(int num) {
+        if(num%2==0){
+            return num+" is even";
+        }else {
+            return num+" is odd";
+        }
+    }
+
+
+}

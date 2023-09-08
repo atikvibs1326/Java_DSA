@@ -1,0 +1,22 @@
+package com.atik.MyCodingPractice;
+
+import java.util.Scanner;
+
+//input =11       || -32
+//o/p=positive    ||  negative
+public class One {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number to check if it is positive or negative:");
+        int num = in.nextInt();
+
+        if(num==0  ){
+            System.out.println(num+" is neutral");
+        } else if (num<0) {
+            System.out.println(num+" is negative");
+        }else {
+            System.out.println(num+" is positive");
+        }
+
+    }
+}

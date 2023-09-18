@@ -1,0 +1,30 @@
+package com.atik.MyCodingPractice;
+
+import java.util.Scanner;
+
+public class Five {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter num 1:");
+        int num1 = in.nextInt();
+        System.out.println("Enter num 2:");
+        int num2= in.nextInt();
+        System.out.println("enter num 3:");
+        int num3 = in.nextInt();
+        System.out.println(bigThree(num1,num2,num3));
+    }
+
+     static int  bigThree(int num1, int num2, int num3) {
+        if(num1<0 || num2<0 || num3<0){
+            return -1;
+        }
+        //first will take num1 and we will check it with num2 num3
+        if(num1>num2 && num1>num3){
+            return num1;
+        } else if (num2>num1 && num2>num3) {
+            return num2;
+        }else {
+            return num3;
+        }
+     }
+}

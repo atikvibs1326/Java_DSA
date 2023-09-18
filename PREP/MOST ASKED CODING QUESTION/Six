@@ -1,0 +1,22 @@
+package com.atik.MyCodingPractice;
+
+import java.util.Scanner;
+
+public class Six {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the year to check :");
+        int year = in.nextInt();
+        System.out.println(leap(year));
+    }
+    static boolean leap(int num){
+        if(num<0){
+           return false;
+        }
+        if(num %4==0){
+           return true;
+        }else {
+            return false;
+        }
+    }
+}

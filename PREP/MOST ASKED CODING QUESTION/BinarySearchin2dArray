@@ -1,0 +1,34 @@
+package com.atik.MyCodingPractice;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class BinarySearchin2d {
+    public static void main(String[] args) {
+        int arr[][]={
+                {86,8,36},
+                {-12,4,72},
+                {34,9,84},
+                {6,100,-400}
+        };
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter The element you want");
+        int target=in.nextInt();
+        int ans[]=bsearch(arr,target);
+        System.out.println("element found  at "+ Arrays.toString(ans));
+
+    }
+
+     static int[] bsearch(int[][] arr, int target) {
+        for(int row=0;row<arr.length;row++){
+            for(int col=0;col<arr[row].length;col++){
+                if(arr[row][col]==target){
+                    return new int []{row,col};
+                }
+            }
+        }
+       {
+             return new int []{-1,-1};
+         }
+     }
+}

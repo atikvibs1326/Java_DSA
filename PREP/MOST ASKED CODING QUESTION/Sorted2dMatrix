@@ -1,0 +1,77 @@
+package com.atik.MyCodingPractice;
+
+import java.util.Arrays;
+
+public class SortedMatrix {
+    public static void main(String[] args) {
+        int[][] arr={
+            {1, 2,   3},
+            {4, 5,  6},
+            {7, 8,  9},
+            {10,11,12}
+        };
+        System.out.println(Arrays.toString(search(arr,6)));
+
+    }
+
+    //this below function is used for row which is provided between the columns provided
+    static  int[] simpleBinarySearch(int [][] matrix,int row,int cStart,int cEnd,int target){
+        while(cStart< cEnd){
+            int mid = cStart +( cEnd -cStart)/2;
+            if(matrix[row][mid] == target){
+                return new int[]{row,mid};
+            }
+            if(matrix[row][mid] < target){
+                cStart=mid+1;
+            }else{
+                cEnd=mid-1;
+            }
+        }
+        return  new int []{-1,-1};
+    }
+    static int[] search(int [][] matrix,int target){
+        int row=matrix.length;
+        int col=matrix[0].length; //be cautious ,Matrix might be empty
+
+        if(row==1){
+            return simpleBinarySearch(matrix,0 ,0,col-1,target);
+        }
+        int rstart = 0;
+        int rend = row-1;
+        int cMid = row/2;
+        //run the loop till the 2 rows are remaining
+        while(rstart < (rend-1)){
+            int mid = rstart +(rend -rstart)/2;
+            if(matrix[mid][cMid]==target){
+                return new int []{mid,cMid};
+            }
+            if(matrix[mid][cMid] < target){
+                rstart = mid;
+            }else {
+                rend=mid;
+            }
+        }
+        //now we have two rows check whether the target is in the column
+        if(matrix[rstart][cMid]== target){
+            return new int []{ rstart,cMid};
+        }
+        if(matrix[rstart+1][cMid] == target){
+            return new int[]{rstart+1,cMid};
+        }
+
+        //for part 1
+        if(target <= matrix[rstart][cMid-1]){
+            return simpleBinarySearch(matrix,rstart,0 ,cMid-1,target);
+        }
+        if(target >= matrix[rstart][cMid+1] && target<=matrix[rstart][cMid+1] ) {
+            return simpleBinarySearch(matrix,rstart,cMid+1,  col-1,target);
+        }
+        if (target <= matrix[rstart+1] [cMid-1]){
+            return  simpleBinarySearch(matrix,rstart+1,0,cMid-1,target);
+        }
+        else {
+                return simpleBinarySearch(matrix,rstart+1,cMid+1,col-1,target);
+        }
+
+    }
+}

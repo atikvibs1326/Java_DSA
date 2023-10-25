@@ -1,0 +1,16 @@
+package inheritancePractice;
+
+public class A {
+    static int j =30;
+    int i=20;
+    boolean isActive;
+    public a(){
+     i=60;
+    }
+
+    public static void main(String[] args) {
+        int i=50;
+        A a1= new A();
+
+    }
+}

@@ -1,0 +1,21 @@
+package inheritancePractice;
+
+
+public class Circle extends Shapes {
+    int radius;
+
+//    public Circle(double h, double w, double l) {
+//        super(h, w, l);
+//    }
+    public Circle(int radius){
+        this.radius=radius;
+    }
+
+
+    void area(){
+        double area=Math.PI*radius*radius;
+        System.out.println("Area of Circle"+area);
+
+    }
+
+}

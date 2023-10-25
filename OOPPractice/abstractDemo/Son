@@ -1,0 +1,20 @@
+package com.atik.abstractDemo;
+
+//Class 'Son' must either be declared abstract or implement abstract method 'career(String)' in 'Parent'
+public class Son extends Parent {
+
+    public Son(int age){
+        super(age);//this will resolve the error relate to the default constructor
+        //this.age=age; // so we elimnate this and pass the age directly in the super()
+    }
+
+    @Override //need to method override
+    void career() {
+        System.out.println("I am going to be a  Doctor");
+    }
+
+    @Override
+    void partner() {
+        System.out.println("I love black widow");
+    }
+}

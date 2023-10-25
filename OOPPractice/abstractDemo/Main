@@ -1,0 +1,47 @@
+package com.atik.abstractDemo;
+
+public class Main {
+    //But the question is Why are we doing the parent class abstract
+    //then we can also use normal method overriding?
+    //simple answer it looks more clean in the parent class
+
+
+    public static void main(String[] args) {
+
+        Son son = new Son(21);
+        son.career();
+
+        Daughter daughter = new Daughter(28);
+        daughter.career();
+
+        // we can do this also reference type is is of parent but at the runtime the object is getting created of the Daughter
+        // so we can access all the Daughter class this is runtime polymorphism same thing we did it in the inheritance
+        //ditto copy paste.
+
+        Parent daughter2 = new Daughter(30);
+        daughter2.career();
+
+        //Now will create the object for parent
+        // Parent mom = new Parent();
+        //this is above parent object will give error as we cannot create the object of abstract class
+        // in order to do so we need the override its methods
+        //look below example
+//        Parent dad = new Parent(56) {
+//            @Override
+//            void career() {
+//
+//            }
+//
+//            @Override
+//            void partner() {
+//
+//            }
+//        };
+
+        Parent.hello();
+
+        daughter.normal();
+
+
+    }
+}

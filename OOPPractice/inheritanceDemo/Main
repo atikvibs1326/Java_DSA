@@ -1,0 +1,8 @@
+package inheritancePractice;
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car("toyota",22,1998,"red");
+        myCar.displayInfo();
+    }
+}

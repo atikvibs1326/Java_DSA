@@ -1,0 +1,16 @@
+package inheritancePractice;
+
+public class Car extends Vehicle{
+    private String color ;
+
+
+    public Car(String make, int model, int year, String color) {
+        super(make, model, year);
+        this.color = color;
+    }
+
+    public void displayColor(){
+        super.displayInfo();
+        System.out.println("color"+color);
+    }
+}

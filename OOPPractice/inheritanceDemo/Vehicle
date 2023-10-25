@@ -1,0 +1,19 @@
+package inheritancePractice;
+
+public class Vehicle {
+    String make;
+    int model;
+    int year;
+
+    public Vehicle(String make, int model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    void displayInfo(){
+        System.out.println("make: "+make);
+        System.out.println("model: "+model);
+        System.out.println("year: "+year);
+    }
+}

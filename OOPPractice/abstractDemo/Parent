@@ -1,0 +1,53 @@
+package com.atik.abstractDemo;
+
+public abstract class Parent {
+    //Q : can we have variables in the abstract class?
+    //A : Sure we can ,check the example below
+
+    int age;
+    final int VALUE;
+
+
+    //Q : can we Create an constructor of abstract Class?
+    //A : lets try
+
+    public Parent(int age){
+        this.age=age;
+        VALUE=23456;  // so this final int value cannot be access ,hence we cannot access it without creating the object
+                      // but we can call it through the super();
+    }
+
+    //Q : Can we Create abstract constructors
+    //A : no we cant create see below it wil give error? line 18
+    //abstract  Parent();
+
+    //Q: Why cant we create the object of abstract class?
+    //A :no, Because if you try to create the object of the parent class
+    //    and we try to call the method for eg career()  ones it will give
+    //    java be like hey you are calling this method but id does not have any body how can i call it?
+    //  Similarly ,we cannot create abstract constructors.
+
+    //Q : can we create abstract static methods?
+    //A : No,Why ? because methods are override and  statics are not meant to be overridden
+    //   Do static methods get overriden ? no then what is the point of making static abstract methods?
+
+    //Q : but can you create the static methods in the abstract classes?
+    //A : Yes, that we can do,look below
+
+    //Q : Can we have normal methods?
+    //A  : Yes we can look below example
+
+    //Q : Can we use the final keyword with abstract the class
+    //A : No,Why because final restricts the inheritance so common sense we want the abstract class to be inherited
+
+    void normal(){
+        System.out.println("i am normal method");
+    }
+
+    static void hello(){
+        System.out.println("Hey");
+    }
+
+    abstract void career();
+    abstract void partner();
+}

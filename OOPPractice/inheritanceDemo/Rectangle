@@ -1,0 +1,17 @@
+package inheritancePractice;
+
+public class Rectangle extends Shapes{
+    double len;
+    double wid;
+
+    Rectangle(double len,double wid){
+        this.len=len;
+        this.wid= wid;
+    }
+
+    @Override
+    void area() {
+       double area= len*wid;
+        System.out.println(area);
+    }
+}

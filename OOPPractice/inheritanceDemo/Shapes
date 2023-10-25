@@ -1,0 +1,28 @@
+package inheritancePractice;
+
+public class Shapes {
+    double h;
+    double w;
+    double l;
+
+    Shapes(){
+       this.h=1;
+       this.w=1;
+       this.l=1;
+    }
+
+    public Shapes(double h, double w, double l) {
+        this.h = h;
+        this.w = w;
+        this.l = l;
+    }
+
+    void area(){
+        System.out.println("this is area method");
+        double  area = h*l*w;
+        System.out.println(area);
+
+
+    }
+
+}

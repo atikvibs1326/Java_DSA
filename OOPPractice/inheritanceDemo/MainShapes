@@ -1,0 +1,26 @@
+package inheritancePractice;
+
+
+
+public  class MainShapes {
+      public static void main(String[] args) {
+          //  Shapes shape = new Shapes();
+            Shapes shape5 = new Shapes(5,8,9);
+            shape5.area();
+//            shape.area();
+          // Circle shape1 = new Shapes(5,5,6);//this will give error as we are creating the object of Parent class
+          // Circle shape1 = new Circle(5);
+//            shape1.area();
+            Rectangle shape3 = new Rectangle(3,5);
+          //  shape3.area();
+
+
+      }
+
+
+
+
+
+
+
+}

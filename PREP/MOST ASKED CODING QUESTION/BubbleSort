@@ -1,0 +1,34 @@
+package com.atik.Coding;
+
+import java.util.Arrays;
+
+public class Bubble {
+    public static void main(String[] args) {
+        int [] arr = {12,4,5,78,39};
+        isSort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+    public static void isSort(int[] arr){
+
+        //step 1 iterate from ith place
+      // and as we will compare two adjacent numbers
+        // i-0  j-1
+        // 12    4
+        for (int i = 0; i < arr.length ; i++) {
+            //now run for j
+            for (int j = 1; j < arr.length-i ; j++) {
+                //check if the variable at jth place is smaller than of ith place if yes then swapp
+                if(arr[j]<arr[j-1 ]){
+                    int temp=arr[j];
+                    arr[j]=arr[j-1];
+                    arr[j-1]=temp;
+                }
+                
+            } 
+            
+        }
+
+    }
+
+
+}

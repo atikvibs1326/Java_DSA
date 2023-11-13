@@ -1,0 +1,17 @@
+package com.atik.Recursion;
+
+public class Fibonacii {
+    public static void main(String[] args) {
+    int ans =fibo(50); //the program will stuck for this number as this is linear recurrence relation
+            //which takes exponential time complexity of golden ratio of
+        System.out.println(ans);
+    }
+    static int fibo(int n){
+        //base condition
+        if(n<2){
+            return n;
+        }
+
+        return fibo(n-1)+fibo(n-2);
+    }
+}

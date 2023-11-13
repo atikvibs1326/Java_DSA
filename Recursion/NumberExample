@@ -1,0 +1,41 @@
+package com.atik.Recursion;
+
+public class NumbersExample {
+
+    public static void main(String[] args) {
+        //write a function that takes in a number and prints it
+        // print first 5 numbers : 1 2 3 4 5
+
+        //approach 1
+        //but now the question is we Cant Do like this below or we cant add multiple println in the function
+//        numbers(1);
+//        numbers(2);
+//        numbers(3);
+//        numbers(4);
+//        numbers(5); So this approach 1  will not work
+        //We Want that only one function call that takes 1 number and prints first 5 numbers.
+        numbers(1);
+
+    }
+    static void  numbers(int no){
+        System.out.println(no);
+        numbers1(2);
+    }
+    static void  numbers1(int no){
+        System.out.println(no);
+        numbers2(3);
+    }
+    static void  numbers2(int no){
+        System.out.println(no);
+        numbers3(4);
+    }
+    static void  numbers3(int no){
+        System.out.println(no);
+        numbers4(5);
+    }
+    //function body changes here
+    static void  numbers4(int no){
+        System.out.println(no);
+    }
+
+}

@@ -1,0 +1,49 @@
+package Round;
+
+import java.util.Scanner;
+
+public class RevString {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the String:");
+        String name =in.next();
+        String reversed = reverse(name);
+        System.out.println("The reversed String is :"+reversed);
+        String ans =isPalindrome(name,reversed);
+        System.out.println(ans);
+    }
+
+    static String reverse(String str){
+        //we create the String builder object to manipulate the string
+        StringBuilder sb = new StringBuilder();
+        //loop from the end till start
+        for(int i=str.length()-1;i>=0;i--){
+            if(str.charAt(i)== ' ') {
+                sb.append(' ');
+            }else{
+            //for each i we are taking the char at that particular i
+            //and appending means adding it to the sb object
+            sb.append(str.charAt(i));
+        }
+        }
+        //returning the sb object using the toString method
+        //Why to.String() here while returning the sb object because it is of String builder class
+        //and the method is asking for the return type of String
+        return sb.toString();
+    }
+    static String isPalindrome(String str, String str2){
+        if(str.equals(str2)){
+            System.out.println("is palindrome");
+        }else{
+            System.out.println("is not a plaindrome");
+        }
+
+        return str;
+    }
+
+}
+
+// Technique
+// 1.Stringbuilder variable to stor the reversed value
+// 2. iterate over the orignal string from backwards 
+// 3 .use of charAt and append it to the Stringbuilder Variable

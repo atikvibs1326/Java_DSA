@@ -1,0 +1,35 @@
+package Round;
+
+import java.util.Scanner;
+
+public class Palindrome {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String str =in.next();
+        System.out.println(isPalindrome(str));
+
+    }
+    static String isPalindrome(String str){
+        //reverse variable str1 of String builder
+        StringBuilder str1 = new StringBuilder();
+
+        //loop over from last character
+        for(int i=str.length()-1;i>=0;i--){
+            str1.append(str.charAt(i));
+        }
+        String rev = str1.toString();
+        if(str.equals(rev)){
+            return "is palindrome";
+        }else{
+          return "is not palindrome";
+        }
+    }
+}
+
+// Technique
+// 1.Reverse String
+// 2.convert stringbuilder use the toString() method
+// 3.basic if check str1 using equals() method to the str2
+
+
+
